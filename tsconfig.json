@@ -4,6 +4,7 @@
         "outDir": "build",
         "target": "ES5",
         "lib": ["ES5"],
-        "strict": true
+        "strict": true,
+        "allowJs": true
     }
 }
