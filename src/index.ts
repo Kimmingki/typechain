@@ -1,4 +1,4 @@
-import * as crypto from "crypto";
+import crypto from "crypto";
 
 interface BlockShape {
     hash: string;
@@ -23,5 +23,6 @@ class Block implements BlockShape {
         data: string
     ): string {
         const toHash = `${prevHash}${height}${data}`;
+        return crypto.createHash("sha256").update(toHash).digest("hex");
     }
 }
